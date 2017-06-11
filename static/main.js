@@ -39,7 +39,7 @@ $('button').click(function(e) {
     var houseCode = getHouseCode();
     var number = getNumberFromID(e.target.id);
     var direction = getDirectionFromID(e.target.id);
-    $.get('/'+houseCode+'/'+number+'/'+direction, function(res) {
+    $.get('/l/'+houseCode+'/'+number+'/'+direction, function(res) {
         console.log(res);
     });
 });
