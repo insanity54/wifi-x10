@@ -4,12 +4,17 @@ var child_process = require('child_process');
 
 
 app.get('/l/:house/:number/:direction', function(req, res) {
-	console.log('turning light %s %s on', req.params.house, req.params.number);
+    var house, number, direction;
+    house = req.params.house.toUpperCase();
+    number = parseInt(req.params.number);
+    direction = req.params.direction.toUpperCase();
+    console.log('turning light %s %s %s', house, number, direction);
+    
 	var process = child_process.spawn(
         	'/home/chris/bin/lights', [
-			req.params.house,
-			req.params.number,
-			req.params.direction 
+			house,
+			number,
+			direction 
 		], {
 			stdio: 'inherit',
 			cwd: '/home/chris'
@@ -32,6 +37,9 @@ app.get('/l/:house/:number/:direction', function(req, res) {
 	});
 
 });
+
+app.use("/", express.static(__dirname + '/static/'));
+
 
 app.listen(8080, function(err) {
 	console.log('listening on port 8080');
