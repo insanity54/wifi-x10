@@ -1,0 +1,14 @@
+{
+  "name": "api-server",
+  "version": "1.0.0",
+  "description": "X10 light wifi bridge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chris Grimmett <chris@grimtech.net>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
