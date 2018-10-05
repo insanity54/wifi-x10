@@ -1,5 +1,7 @@
 # smarthome X10 light wifi bridge
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/insanity54/wifi-x10.svg)](https://greenkeeper.io/)
+
 ## The Device
 
   * Raspberry pi (or similar. I'm using an OrangePi One)
